@@ -6,7 +6,6 @@ import {MaterialModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 
-
 import 'hammerjs';
 
 import { CovalentCoreModule } from '@covalent/core';
