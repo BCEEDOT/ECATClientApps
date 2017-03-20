@@ -56,7 +56,7 @@ function generateMetadata() {
   // TODO: add a check that the 'breeze.tooling' dir exists and that the metadataGenerator.dll has been created.
   var projectPath = path.resolve(__dirname, '../../')
   var webServicesProject = path.join(projectPath, 'TestWebServices', 'EF', 'bin', 'Debug', 'EF');
-  var generatorProject = path.join(projectPath, 'EcatBreezeTooling', 'MetadataGenerator', 'MetadataGenerator', 'bin', 'Debug', 'metadatagenerator')
+  var generatorProject = path.join(projectPath, 'BreezeTooling', 'MetadataGenerator', 'MetadataGenerator', 'bin', 'Debug', 'metadatagenerator')
   var spawnInfo = spawnExt(generatorProject,
     ['-i', webServicesProject]);
   return spawnInfo.promise;
