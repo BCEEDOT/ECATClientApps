@@ -12,11 +12,14 @@ import { CovalentCoreModule } from '@covalent/core';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 
+import { BreezeBridgeAngularModule } from 'breeze-bridge-angular';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BreezeBridgeAngularModule,
     BrowserModule,
     FormsModule,
     HttpModule,
