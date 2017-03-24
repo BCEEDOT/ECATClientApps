@@ -1,40 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from './services/hero.service';
+import { ProductService } from './services/product.service';
+import { Http } from '@angular/http';
+import { Product } from '../entities/product/product';
 
-export class Hero {
-  key: number;
-  value: string;
-}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [HeroService]
+  providers: [ProductService]
 })
 
 export class AppComponent implements OnInit {
 
   title = 'Tour of Heroes';
-  heroes: Hero[];
-  selectedHero: Hero;
-  
-  constructor(private heroService: HeroService){
-    
+  product: Product;
+  products: Product[];
+
+
+  constructor(private ps: ProductService) {
+      
   }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getProducts();
   }
-  
-  getHeroes(): void {
-    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
-  }  
 
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+  getProducts() {
+    this.ps.getProducts().then(products => this.products = products);
   }
+
 }
 
 

@@ -10,7 +10,9 @@ export class Product extends EntityBase {
    description: string;
 
    /// <code> Place custom code between <code> tags
-   
+   static resourceName = 'Product';
+
+   static initializer(entity: Product){}
    /// </code>
 
 }

@@ -13,6 +13,7 @@ import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 
 import { BreezeBridgeAngularModule } from 'breeze-bridge-angular';
+import { ServicesModule } from './services';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BreezeBridgeAngularModule } from 'breeze-bridge-angular';
     CovalentCoreModule.forRoot(),
     CovalentHighlightModule.forRoot(),
     CovalentMarkdownModule.forRoot(),
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
